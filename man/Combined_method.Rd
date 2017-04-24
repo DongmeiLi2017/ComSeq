@@ -47,7 +47,7 @@ The DESeq2, EBSeq, SAMSeq, and NOISeq packages.
 
 \examples{
 
-bottomly_count <- load("D:/Dongmei/Research/NGS/New_RNA_Seq/Combind_method/Combine/data/Bottomly_RNASeq.Rda")
+bottomly_count <- read.table("http://bowtie-bio.sourceforge.net/recount/countTables/bottomly_count_table.txt", header=TRUE, sep = "\t")
 label <- c(rep(0, 10), rep(1, 11))
 Result <- Combined_method(RNAseqcount = bottomly_count, label = label, alpha = 0.05)
 
