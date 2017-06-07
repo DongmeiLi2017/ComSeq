@@ -1,3 +1,3 @@
 exportPattern("^[[:alpha:]]+")
 import(edgeR, DESeq2, EBSeq, samr, NOISeq)
-export(Combined)
+export(Combined_method)
