@@ -57,10 +57,11 @@ The {\tt Combined_method} function in the {\tt Combine} package requires input d
 %code 3
 <<eval=TRUE, echo=TRUE>>=
 library(Combine)
-bottomly_count <- read.table("http://bowtie-bio.sourceforge.net/recount/countTables/bottomly_count_table.txt", header=TRUE, sep = "\t")
-head(bottomly_count)
+system.file("data", package = "Combine")
+data(Bottomly_RNASeq)
+summary(Bottomly_RNASeq)
 label <- c(rep(0, 10), rep(1, 11))
-Result <- Combined_method(RNAseqcount = bottomly_count, label = label, alpha = 0.05)
+Result <- Combined_method(RNAseqcount = Bottomly_RNASeq, label = label, alpha = 0.05)
 summary(Result)
 Result
 @
