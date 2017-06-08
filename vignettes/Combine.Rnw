@@ -59,9 +59,9 @@ The {\tt Combined_method} function in the {\tt Combine} package requires input d
 library(Combine)
 system.file("data", package = "Combine")
 data(Bottomly_RNASeq)
-summary(Bottomly_RNASeq)
+summary(bottomly_count)
 label <- c(rep(0, 10), rep(1, 11))
-Result <- Combined_method(RNAseqcount = Bottomly_RNASeq, label = label, alpha = 0.05)
+Result <- Combined_method(RNAseqcount = bottomly_count, label = label, alpha = 0.05)
 summary(Result)
 Result
 @
