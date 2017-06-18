@@ -1,7 +1,7 @@
 Package: Combine
 Type: Package
 Title: Combine: An ensemble method for RNA-Seq differential analysis 
-Version: 0.1.6
+Version: 0.99.0
 Author: Dongmei Li
 Maintainer: Dongmei Li <Dongmei_Li@urmc.rochester.edu>
 Depends: R (>= 3.3.0), edgeR, DESeq2, EBSeq, samr, NOISeq
