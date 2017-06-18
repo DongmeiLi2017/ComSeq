@@ -1,7 +1,7 @@
 Package: ComSeq
 Type: Package
 Title: ComSeq: An ensemble method for RNA-Seq differential analysis 
-Version: 0.99.0
+Version: 0.99.1
 Author: Dongmei Li
 Maintainer: Dongmei Li <Dongmei_Li@urmc.rochester.edu>
 Depends: R (>= 3.3.0), edgeR, DESeq2, EBSeq, samr, NOISeq
