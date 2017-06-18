@@ -1,7 +1,7 @@
 \name{Combined_method}
-\alias{Ensemble_method}
+\alias{Combined_method}
 
-\title{Combined_method: a R function for RNA-Seq data differential analysis
+\title{Combined_method: a R function for RNA-Seq data differential analysis for ComSeq package
 }
 \description{This ensemble method combined four current methods (DESeq2, EBSeq, SAMSeq, NOISeq) with equal weight on their resulting FDR-adjusted P-values to identify significantly differentially expressed genes from RNA-Seq data.
 }
