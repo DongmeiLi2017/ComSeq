@@ -46,14 +46,14 @@ The DESeq2, EBSeq, SAMSeq, and NOISeq packages.
 }
 
 \examples{
-
-counts <- matrix(rnbinom(n=10000, mu=100, size=1/0.5), ncol=10)
-gene <- c(1:1000)
-count <- cbind(gene, counts)
-colnames(count) <- c("geneID", paste("Control", 1:5, sep = ""), paste("Treatment", 1:5, sep = ""))
-label <- c(rep(0, 5), rep(1, 5))
-Result <- Combined_method(RNAseqcount = count, label = label, alpha = 0.05)
-
+library(Combine)
+system.file("data", package = "Combine")
+data("Bottomly_count")
+summary(Bottomly_count)
+label <- c(rep(0, 10), rep(1, 11))
+Result <- Combined_method(RNAseqcount = Bottomly_count, label = label, alpha = 0.05)
+summary(Result)
+Result
 }
 
 \keyword{ RNA-Seq }
