@@ -8,5 +8,6 @@ Depends: R (>= 3.3.0), edgeR, DESeq2, EBSeq, samr, NOISeq
 Description: This ensemble method use four current methods (DESeq2, EBSeq, SAMSeq, NOISeq) with equal weight on their 
              resulting FDR-adjusted P-values to identify significant genes from RNA-Seq data.
 License:  GPL (>= 2)
+biocViews: Sequencing, ChIPSeq, RNASeq, SAGE, DifferentialExpression, GeneExpression, Transcriptome
 Encoding: UTF-8
 LazyData: true
