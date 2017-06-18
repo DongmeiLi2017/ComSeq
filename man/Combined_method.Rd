@@ -46,8 +46,8 @@ The DESeq2, EBSeq, SAMSeq, and NOISeq packages.
 }
 
 \examples{
-library(Combine)
-system.file("data", package = "Combine")
+library(ComSeq)
+system.file("data", package = "ComSeq")
 data("Bottomly_count")
 summary(Bottomly_count)
 label <- c(rep(0, 10), rep(1, 11))
