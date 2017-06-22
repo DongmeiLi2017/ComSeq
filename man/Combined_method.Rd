@@ -46,7 +46,6 @@ The DESeq2, EBSeq, SAMSeq, and NOISeq packages.
 }
 
 \examples{
-library(ComSeq)
 system.file("data", package = "ComSeq")
 data("Bottomly_count")
 summary(Bottomly_count)
