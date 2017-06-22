@@ -1,5 +1,5 @@
 exportPattern("^[[:alpha:]]+")
 importFrom("stats", "p.adjust")
-import(edgeR, DESeq2, EBSeq, samr, NOISeq)
 import(edgeR, except=rpkm)
+import(DESeq2, EBSeq, samr, NOISeq)
 export(Combined_method)
