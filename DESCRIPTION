@@ -4,7 +4,7 @@ Title: ComSeq: An ensemble method for RNA-Seq differential analysis
 Version: 0.99.3
 Author: Dongmei Li
 Maintainer: Dongmei Li <Dongmei_Li@urmc.rochester.edu>
-Depends: R (>= 3.4.), edgeR, DESeq2, EBSeq, samr, NOISeq
+Depends: R (>= 3.4.), edgeR, DESeq2, EBSeq, samr, NOISeq, stat
 Description: This ensemble method use four current methods (DESeq2, EBSeq, SAMSeq, NOISeq) with equal weight on their 
              resulting FDR-adjusted P-values to identify significant genes from RNA-Seq data.
 License:  GPL (>= 2)
