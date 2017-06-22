@@ -10,7 +10,7 @@ Combined_method(RNAseqcount, label, alpha)
 }
 
 \arguments{
-  \item{RNASeqcount}{
+  \item{RNAseqcount}{
    The input RNA-Seq count matrix with rows and columns denoting features and samples, respectively. The first column of the matrix denotes names of features.
 }
   \item{label}{
