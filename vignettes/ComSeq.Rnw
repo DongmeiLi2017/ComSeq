@@ -37,7 +37,7 @@ The {\tt ComSeq} package can be installed and loaded through the following R cod
 
 Install the {\tt ComSeq} package with:
 %code 1
-<<eval=FALSE, echo=TRUE>>=
+<<eval=TRUE, echo=TRUE>>=
 source("http://bioconductor.org/biocLite.R")
 biocLite("ComSeq")
 @
@@ -45,7 +45,7 @@ biocLite("ComSeq")
 Load the {\tt ComSeq} package with:
 
 %code 2
-<<eval=FALSE, echo=TRUE>>=
+<<eval=TRUE, echo=TRUE>>=
 library(ComSeq)
 @
 
@@ -56,7 +56,6 @@ The {\tt Combined_method} function in the {\tt ComSeq} package requires input da
 
 %code 3
 <<eval=TRUE, echo=TRUE>>=
-library(ComSeq)
 system.file("data", package = "ComSeq")
 data(Bottomly_count)
 summary(Bottomly_count)
