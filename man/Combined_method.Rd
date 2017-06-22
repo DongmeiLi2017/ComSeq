@@ -6,7 +6,7 @@
 \description{This ensemble method combined four current methods (DESeq2, EBSeq, SAMSeq, NOISeq) with equal weight on their resulting FDR-adjusted P-values to identify significantly differentially expressed genes from RNA-Seq data.
 }
 \usage{
-Combined(RNAseqcount, label, alpha)
+Combined_method(RNAseqcount, label, alpha)
 }
 
 \arguments{
