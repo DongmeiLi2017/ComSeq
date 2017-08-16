@@ -5,8 +5,10 @@ Version: 0.99.8
 Author: Dongmei Li
 Maintainer: Dongmei Li <Dongmei_Li@urmc.rochester.edu>
 Depends: R (>= 3.4), edgeR, DESeq2, EBSeq, samr, NOISeq, stats
-Description: This ensemble method use four current methods (DESeq2, EBSeq, SAMSeq, NOISeq) with equal weight on their 
-             resulting FDR-adjusted P-values to identify significant genes from RNA-Seq data.
+Description: This ensemble method use results from four current RNA-seq differential analysis methods (DESeq2, EBSeq, SAMSeq, NOISeq) and 
+             declare a gene is significantly differentially expressed only when the gene is detected significant by all four methods. The 
+             rank of selected genes is based on a weighted algorithm that assign more weights on genes detected by the DESeq2 and EBSeq 
+             methods than the SAMSeq and NOISeq methods.
 License:  GPL (>= 2)
 biocViews: Sequencing, ChIPSeq, RNASeq, SAGE, DifferentialExpression, GeneExpression
 Encoding: UTF-8
