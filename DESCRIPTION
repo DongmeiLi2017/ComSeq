@@ -1,14 +1,16 @@
 Package: ComSeq
 Type: Package
 Title: ComSeq: An ensemble method for RNA-Seq differential analysis 
-Version: 0.99.8
+Version: 0.99.9
 Author: Dongmei Li
 Maintainer: Dongmei Li <Dongmei_Li@urmc.rochester.edu>
 Depends: R (>= 3.4), edgeR, DESeq2, EBSeq, samr, NOISeq, stats
 Description: This ensemble method use results from four current RNA-seq differential analysis methods (DESeq2, EBSeq, SAMSeq, NOISeq) and 
              declare a gene is significantly differentially expressed only when the gene is detected significant by all four methods. The 
              rank of selected genes is based on a weighted algorithm that assign more weights on genes detected by the DESeq2 and EBSeq 
-             methods than the SAMSeq and NOISeq methods.
+             methods than the SAMSeq and NOISeq methods. The ensemble method has much lower false discovery rate than all other popular 
+             RNA-Seq differential analysis methods especially when sample size is as small as three shown in our simulation studies. The 
+             ensemble method greatly increases the probability of true positive findings for studies with small sample sizes.
 License:  GPL (>= 2)
 biocViews: Sequencing, ChIPSeq, RNASeq, SAGE, DifferentialExpression, GeneExpression
 Encoding: UTF-8
