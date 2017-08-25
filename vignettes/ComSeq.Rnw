@@ -65,7 +65,33 @@ comparisons and only take three arguments as input: RNA-Seq count matrix, group 
 The RNA-Seq data was first filtered out genes with summarized count across all samples less than 10, then normalized using the TMM method. 
 The TMM normalization method has relatively better performance than other methods in terms of smaller coefficient of variation shown by 
 previous literature. For group label, the {\tt Combined_method} function needs a vector, i.e., "1" denotes the treatment group and "0" 
-denotes the control group. The default value for false discovery rate is 5\%.
+denotes the control group. The default value for false discovery rate is 5\%. The following is an example of using the RNA-Seq count data 
+generated from random uniform distributions.
+
+%code 3
+<<eval=TRUE, echo=TRUE>>=
+source("https://bioconductor.org/biocLite.R")
+biocLite("SummarizedExperiment")
+library(SummarizedExperiment)
+nrows <- 200
+ncols <- 6
+counts <- matrix(runif(nrows * ncols, 1, 1e4), nrows)
+rowRanges <- GRanges(rep(c("chr1", "chr2"), c(50, 150)),
+                     IRanges(floor(runif(200, 1e5, 1e6)), width=100),
+                     strand=sample(c("+", "-"), 200, TRUE),
+                     feature_id=sprintf("ID%03d", 1:200))
+colData <- DataFrame(Treatment=rep(c(1, 0), 3),
+                     row.names=LETTERS[1:6])
+
+RNAdata <- SummarizedExperiment(assays=list(counts=counts),
+                     rowRanges=rowRanges, colData=colData)
+                     
+count <- assays(RNAdata)$counts
+label <- colData(RNAcount)$Treatment  
+Result_1 <- Combined_method(RNAseqcount = count, label = label, alpha = 0.05)
+summary(Result_1)
+Result_1
+@
 
 The gene expression in C57BL/6J and DBA/2J mouse striatum example is used to illustrate the application of {\tt Comined_method} in 
 identifying differentially expressed genes from RNA-Seq data. The C57BL/6J (B6) and DBA/2J (D2) mouse strains are commonly used in 
@@ -74,18 +100,18 @@ reads generated per sample. The reads were aligned to the mouse reference genome
 were generated after preprocessing. Genes with summarized count across all 21 samples less than 10 were first filtered out from the study. 
 Then the TMM method was used to normalize the RNA-Seq count data before the differential analysis. The normalized RNA-Seq data were 
 analyzed using the DESeq2, EBSeq, SAMSeq, and NOISeq packages to select significantly differentially expressed genes between groups. 
-The Combined method then claims a gene is significant only when it was claimed significant by all four methods. The following code showed 
-an example of using the Comined_method function to get the list of differentially expressed genes between groups.
+The Combined method then claims a gene is significant only when it was claimed significant by all four methods. The following code 
+showed an example of using the Comined_method function to get the list of differentially expressed genes between groups.
 
-%code 3
+%code 4
 <<eval=TRUE, echo=TRUE>>=
 system.file("data", package = "ComSeq")
 data(Bottomly_count)
 summary(Bottomly_count)
 label <- c(rep(0, 10), rep(1, 11))
-Result <- Combined_method(RNAseqcount = Bottomly_count, label = label, alpha = 0.05)
-summary(Result)
-Result
+Result_2 <- Combined_method(RNAseqcount = Bottomly_count, label = label, alpha = 0.05)
+summary(Result_2)
+Result_2
 @
 
 
