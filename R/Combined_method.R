@@ -1,6 +1,15 @@
 ## Combined analysis method function
 
-Combined_method <- function(RNAseqcount, label, alpha) {
+Combined_method <- function(RNAseqcount, label, alpha, test = c("Wald", "LRT"), fitType = c("parametric", 
+    "local", "mean"), betaPrior, full = design(object), reduced, 
+    quiet = FALSE, minReplicatesForReplace = 7, modelMatrixType, 
+    parallel = FALSE, BPPARAM = bpparam()) {
+    
+    ## Check the validity of the input values
+    
+    if(!is.matrix(RNAseqcount)){
+	stop("The input data is not in matrix format")
+    }
     
     ## Filtering
     
@@ -11,6 +20,15 @@ Combined_method <- function(RNAseqcount, label, alpha) {
     genename <- RNAseqcount[, 1]
     
     ## edgeR Exact Test 3.12.0
+    
+    if (missing(label)) {
+    stop("label is missing, need to put a label in vector format with 1s and 0s")
+        
+    }
+    
+    if (alpha > 1){
+    stop("alpha need to be a value of <= 1")
+    }
     
     design <- cbind(Grp1 = 1, Grp2vs1 = label)
     
