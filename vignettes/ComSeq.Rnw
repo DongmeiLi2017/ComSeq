@@ -87,7 +87,7 @@ RNAdata <- SummarizedExperiment(assays=list(counts=counts),
                      rowRanges=rowRanges, colData=colData)
                      
 count <- assays(RNAdata)$counts
-label <- colData(RNAcount)$Treatment  
+label <- colData(RNAdata)$Treatment  
 Result_1 <- Combined_method(RNAseqcount = count, label = label, alpha = 0.05)
 summary(Result_1)
 Result_1
