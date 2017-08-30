@@ -1,0 +1,7 @@
+ComSeq is a new RNA-seq differential analysis package using ensemble method of four commonly used differential analysis methods 
+including DESeq2, EBSeq, SAMSeq, and NOISeq. This ensemble method use results from the four RNA-seq differential analysis methods 
+and declare a gene is significantly differentially expressed only when the gene is detected significant by all four methods. The 
+rank of selected genes is based on a weighted algorithm that assign more weights on genes detected by the DESeq2 and EBSeq methods 
+than the SAMSeq and NOISeq methods. The ensemble method has much lower false discovery rate than all other popular RNA-Seq 
+differential analysis methods especially when sample size is as small as three shown in our simulation studies. The ensemble method 
+greatly increases the probability of true positive findings for studies with small sample sizes.
