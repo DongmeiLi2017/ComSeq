@@ -64,7 +64,7 @@ biomedical users, the {\tt Combined_method} function takes many default settings
 comparisons and only take three arguments as input: RNA-Seq count matrix, group label, and alpha value for false discovery rate control.
 The RNA-Seq data was first filtered out genes with summarized count across all samples less than 10, then normalized using the TMM method. 
 The TMM normalization method has relatively better performance than other methods in terms of smaller coefficient of variation shown by 
-previous literature. For group label, the {\tt Combined_method} function needs a vector, i.e., "1" denotes the treatment group and "0" 
+previous normalization methods comparison studies. For group label, the {\tt Combined_method} function needs a vector, i.e., "1" denotes the treatment group and "0" 
 denotes the control group. The default value for false discovery rate is 5\%. The following is an example of using the RNA-Seq count data 
 generated from random uniform distributions.
 
