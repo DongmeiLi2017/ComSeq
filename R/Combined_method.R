@@ -1,7 +1,8 @@
 ## Combined analysis method function
 
-Combined_method <- function(RNAseqcount, label, alpha, test = c("Wald", "LRT"), fitType = c("parametric", 
-    "local", "mean"), betaPrior, full = design(object), reduced, 
+Combined_method <- function(RNAseqcount, label, alpha, test = c("Wald", "LRT"), 
+			    fitType = c("parametric", "local", "mean"), 
+			    betaPrior, full = design(object), reduced, 
     quiet = FALSE, minReplicatesForReplace = 7, modelMatrixType, 
     parallel = FALSE, BPPARAM = bpparam()) {
     
